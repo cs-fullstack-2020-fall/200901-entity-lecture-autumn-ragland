@@ -1,0 +1,15 @@
+@* ref object passed in to view *@
+@model Lecture.DAO.ApartmentDbContext
+
+<h1>View All Residents</h1>
+@* itertate through residents property of passed object *@
+@foreach (ResidentModel resident in @Model.residents)
+{
+    <p>Id : @resident.id</p>
+    <p>Name : @resident.name</p>
+    <p>Apartment Number : @resident.apartmentNumber</p>
+    @if(@resident.hasPets)
+    {
+        <p>This resident has pets!</p>
+    }
+}

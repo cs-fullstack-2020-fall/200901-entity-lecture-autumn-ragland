@@ -1,0 +1,135 @@
+{
+	"info": {
+		"_postman_id": "8f088574-c04c-4391-b3ae-94d759934e94",
+		"name": "200901-Entity-Lecture",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Resident",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "resName",
+							"value": "Adam",
+							"type": "text"
+						},
+						{
+							"key": "resApartmentNumber",
+							"value": "163",
+							"type": "text"
+						},
+						{
+							"key": "resHasPets",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:5001/Apartment/AddResident",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Apartment",
+						"AddResident"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Resident",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "resID",
+							"value": "19",
+							"type": "text"
+						},
+						{
+							"key": "resHasPets",
+							"value": "true",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:5001/Apartment/UpdateResidentPets",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Apartment",
+						"UpdateResidentPets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View Residnets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/Apartment/ViewAllResidents",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Apartment",
+						"ViewAllResidents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Resident",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "resID",
+							"value": "19",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://localhost:5001/Apartment/DeleteResident",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Apartment",
+						"DeleteResident"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
